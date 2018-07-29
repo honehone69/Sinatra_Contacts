@@ -5,22 +5,27 @@
         <link rel="stylesheet" href="/style.css">
     </head>
     <body>
-        <h1>連絡帳</h1>
-        
+        <div class="header-logo">
+            <h1>連絡帳</h1>
+        </div>
+            
+            
         <% if @message %>
             <div class="message"><%= @message %></div>
         <% end %>
-        
+            
         <div>
             <a href="/contact_new">連絡先の新規作成</a>
         </div>
-        
+            
         <div>
             <table border="1">
                 <thead>
                     <tr>
                         <th>ID</th>
                         <th>名前</th>
+                        <th>Email</th>
+                        <th>住所</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -28,6 +33,8 @@
                         <tr>
                             <td><%= contact.id %></td>
                             <td><%= contact.name %></td>
+                            <td><%= contact.email %></td>
+                            <td><%= contact.address %></td>
                         </tr>
                     <% end %>
                 </tbody>
